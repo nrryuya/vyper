@@ -247,15 +247,15 @@ Takes two elliptical curves and multiplies them together.
 
 Takes encoded RLP data and an unencoded list of types. Usage::
 
-  vote_msg: bytes <= 1024 = ...
+  vote_msg: bytes[1024]
 
   values = RLPList(vote_msg, [int128, int128, bytes32, bytes, bytes])
 
   var1: int128 = values[0]
   var2: int128 = values[1]
   var3: bytes32 = values[2]
-  var4: bytes <= 1024 = values[3]
-  var5: bytes <= 1024 = values[4]
+  var4: bytes[1024] = values[3]
+  var5: bytes[1024] = values[4]
 
 Note: RLP decoder needs to be deployed if one wishes to use it outside of the Vyper test suite. Eventually, the decoder will be available on mainnet at a fixed address. But for now, here's how to create RLP decoder on other chains:
 
