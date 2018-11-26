@@ -235,7 +235,7 @@ Takes two elliptical curves and multiplies them together.
 ---------------
 ::
 
-  def _RLPList(a, b) -> c:
+  def RLPList(a, b) -> c:
     """
     :param a: encoded data
     :type a: bytes
